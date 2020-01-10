@@ -1,1 +1,2 @@
-# apachebeam-gzip-textio
+# go-apachebeam-gzipio
+

@@ -1,0 +1,4 @@
+.idea
+test/output.write.gz
+test/output.write.txt
+test/output.read.txt
