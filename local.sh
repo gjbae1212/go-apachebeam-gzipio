@@ -9,7 +9,7 @@ function test
 {
    rm $CURRENT/test/output.read.* || true
    rm $CURRENT/test/output.write.* || true
-   go test -v github.com/gjbae1212/go-apachebeam-gzipio
+   go test -v $(go list ./... | grep -v vendor) --count 1 -race -covermode=atomic
 }
 
 CMD=$1
