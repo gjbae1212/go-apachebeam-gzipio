@@ -5,6 +5,7 @@ import (
 	"compress/gzip"
 	"context"
 	"fmt"
+	"reflect"
 	"strings"
 
 	"github.com/apache/beam/sdks/go/pkg/beam"
@@ -118,4 +119,10 @@ func (w *writeFileFn) ProcessElement(ctx context.Context, key int, values func(*
 		return err
 	}
 	return nil
+}
+
+func init() {
+	beam.RegisterType(reflect.TypeOf((*writeFileFn)(nil)).Elem())
+	beam.RegisterFunction(extractFilesFn)
+	beam.RegisterFunction(readFilesFn)
 }
