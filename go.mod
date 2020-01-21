@@ -1,4 +1,4 @@
-module github.com/gjbae1212/go-apachebeam-gzipio
+module github.com/gjbae1212/go-apachebeam-gzipio/v2
 
 go 1.13
 
